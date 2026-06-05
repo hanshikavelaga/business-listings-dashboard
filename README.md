@@ -63,7 +63,19 @@ The project processes a large restaurant/business dataset, stores cleaned record
 - Pandas
 - Faker
 - OpenPyXL
+---
+## Technology Stack Summary
 
+| Layer | Technology |
+|---------|------------|
+| Frontend | React.js |
+| Backend | FastAPI |
+| Database | MySQL |
+| Data Processing | Pandas |
+| Visualization | Recharts |
+| API Testing | FastAPI Swagger UI |
+| Version Control | Git & GitHub |
+| Development Environment | VS Code |
 ---
 
 ## Project Architecture
@@ -267,6 +279,17 @@ This project helped in understanding:
 - PDF Report Generation
 
 ---
+## ⚠️ Challenges Faced
+1. **NaN values in dataset** — Some columns had empty values
+   that caused MySQL insertion errors. Fixed using pandas
+   `fillna()` and `astype(str)`.
+
+2. **CORS error** — React (port 3000) couldn't talk to FastAPI
+   (port 8000). Fixed by adding CORSMiddleware in FastAPI.
+
+3. **Column size error** — Some category text exceeded
+   VARCHAR(100). Fixed by increasing to VARCHAR(500).
+
 
 ## Author
 
